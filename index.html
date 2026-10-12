@@ -1607,6 +1607,20 @@ footer{padding-bottom:120px}
   .gal{grid-template-columns:repeat(5,1fr) !important}
   .bachdang{grid-template-columns:1fr 1.1fr !important}
 }
+/* phone held sideways: compact header, safe areas, smaller floating button */
+@media (orientation:landscape) and (max-height:520px){
+  .nav .wrap{height:46px;padding-block:0;flex-wrap:nowrap}
+  .nav ul{order:0;width:auto;font-size:12.5px;gap:14px;padding-bottom:0}
+  .brand img{height:18px}.brand .lg-hmg{height:20px}
+  .wrap{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+  .hero{min-height:0 !important;padding-top:56px !important}
+  section[id]{scroll-margin-top:56px}
+  #leafmap{height:min(78vh,420px)}
+  .fab-pdf{padding:10px;right:max(12px,env(safe-area-inset-right));bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+  .fab-tx{display:none}
+  .fab-ic{width:24px;height:24px;font-size:14px}
+  footer{padding-bottom:72px}
+}
 </style>
 
 <nav class="nav" aria-label="섹션">
